@@ -1,2 +1,6 @@
-# Algorithm
-알고리즘 문제풀이 한 것을 기록해놓은 저장소 (Feat. 정올, 백준, 프로그래머스..)
+# 🔥 Algorithm 🔥
+
+### 💻 Contents
+- [Jungol](http://jungol.co.kr/bbs/board.php?bo_table=pbank)
+- [Baekjoon](https://www.acmicpc.net/step)
+- [Programmers](https://programmers.co.kr/learn/challenges)
