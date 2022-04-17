@@ -1,10 +1,7 @@
 package 출력.형성평가4;
 
 /**
- * kor 90
- * mat 80
- * eng 100
- * sum 270
+ *
  */
 public class Main {
     public static void main(String[] args) {

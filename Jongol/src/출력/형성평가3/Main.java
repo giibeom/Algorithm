@@ -1,11 +1,7 @@
 package 출력.형성평가3;
 
 /**
- * TTTTTTTTTT
- * TTTTTTTTTT
- *     TT
- *     TT
- *     TT
+ *
  */
 public class Main {
     public static void main(String[] args) {
