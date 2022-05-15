@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-    public int solution(String str, char t) {
-        int answer = 0;
+    public String solution() {
+        String answer = "";
 
         return answer;
     }
