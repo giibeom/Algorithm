@@ -45,9 +45,48 @@ public class Main {
         return answer.toString();
     }
 
-    /*
 
-    * */
+    public ArrayList<Integer> solutionInLecture(int count, String numLine) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        int [] arr = new int[count];
+
+        StringTokenizer st = new StringTokenizer(numLine);
+        int i = 0;
+        while (st.hasMoreTokens()) {
+            arr[i] = Integer.parseInt(st.nextToken());
+            i++;
+        }
+
+        for (i = 0; i < count; i++) {
+            int tmp = arr[i];
+            int res = 0;
+            while (tmp > 0) {
+                int t = tmp % 10;
+                res = res * 10 + t;
+                tmp = tmp / 10;
+            }
+            if (isPrime(res)) {
+                answer.add(res);
+            }
+        }
+
+        return answer;
+    }
+
+    private boolean isPrime(int res) {
+        if (res == 1) {
+            return false;
+        }
+
+        for (int i = 2; i < res; i++) {
+            if (res % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
     public static void main(String[] args) throws IOException {
         Main main = new Main();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
