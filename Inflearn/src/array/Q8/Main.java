@@ -60,6 +60,35 @@ public class Main {
         return rank;
     }
 
+    public int[] solutionInLecture(int count, String scores) {
+        int[] answer = new int[count];
+        int[] arr = new int[count];
+
+        StringTokenizer st = new StringTokenizer(scores);
+        int idx = 0;
+        while (st.hasMoreTokens()) {
+            arr[idx] = Integer.parseInt(st.nextToken());
+            idx++;
+        }
+
+        /*
+            완전탐색 알고리즘은 이중for문 돌면서 하나하나씩 체크하면 됨
+            이중for문을 돌면서 자기보다 클때마다 1로 초기화되어있는 rank를 1 증가하면 자동으로 동점 핸들링도 가능
+        * */
+        for (int i = 0; i < count; i++) {
+            int rank = 1;
+            for (int j = 0; j < count; j++) {
+                if (arr[j] > arr[i]) {
+                    rank++;
+                }
+            }
+            answer[i] = rank;
+        }
+
+        return answer;
+    }
+
+
     public static void main(String[] args) throws IOException {
         Main main = new Main();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -67,6 +96,10 @@ public class Main {
         int count = Integer.parseInt(br.readLine());
         String scores = br.readLine();
 
-        System.out.print(main.solution(count, scores));
+//        System.out.print(main.solution(count, scores));
+
+        for (int rank : main.solutionInLecture(count, scores)) {
+            System.out.print(rank + " ");
+        }
     }
 }
