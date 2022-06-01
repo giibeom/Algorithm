@@ -83,3 +83,22 @@
   - return String
 </div>
 </details>
+
+<details>
+<summary>Math</summary>
+<div markdown="1">       
+
+- `Math.max(a,b)`
+  - a와 b 중 더 큰 값을 반환
+  - return int
+- `Math.floor(a)`
+  - 내림
+- `Math.ceil(a)`
+  - 올림
+- `Math.round(a)`
+  - 반올림
+- `Math.abs(a)`
+  - 절대값
+
+</div>
+</details>
