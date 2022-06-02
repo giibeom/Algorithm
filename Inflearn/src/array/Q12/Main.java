@@ -40,6 +40,36 @@ public class Main {
         return answer;
     }
 
+    public int solutionInLecture(int stuNum, int testCount, int[][] arr) {
+        int answer = 0;
+
+        for (int i = 1; i <= stuNum; i++) {
+            for (int j = 1; j <= stuNum; j++) {
+                int cnt = 0;
+                for (int k = 0; k < testCount; k++) {
+                    int pi = 0;
+                    int pj = 0;
+                    for (int s = 0; s < stuNum; s++) {
+                        if (arr[k][s] == i) {
+                            pi = s;
+                        }
+                        if (arr[k][s] == j) {
+                            pj = s;
+                        }
+                    }
+                    if (pi < pj) {
+                        cnt++;
+                    }
+                    if (cnt == testCount) {
+                        answer++;
+                    }
+                }
+            }
+        }
+        return answer;
+    }
+
+
     public static void main(String[] args) throws IOException {
         Main main = new Main();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
