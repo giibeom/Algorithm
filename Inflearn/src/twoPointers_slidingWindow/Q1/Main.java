@@ -25,10 +25,59 @@ public class Main {
         return answer;
     }
 
-    public ArrayList<Integer> solutionInLecture(int[] aArr, int[] bArr) {
+    public ArrayList<Integer> solutionThroughtTwoPointers(int aArrCount, int bArrCount, int[] aArr, int[] bArr) {
 
         ArrayList<Integer> answer = new ArrayList<>();
+        int p1 = 0;
+        int p2 = 0;
 
+        for (int i = 0; i < Math.max(aArrCount, bArrCount); i++) {
+
+            if (p1 == aArrCount - 1) {
+                for (int j = p2; j < bArrCount; j++) {
+                    answer.add(bArr[j]);
+                }
+                break;
+            } else if (p2 == bArrCount - 1) {
+                for (int j = p1; j < aArrCount; j++) {
+                    answer.add(aArr[j]);
+                }
+                break;
+            } else {
+                if (aArr[p1] < bArr[p2]) {
+                    answer.add(aArr[p1]);
+                    p1++;
+                } else {
+                    answer.add(bArr[p2]);
+                    p2++;
+                }
+            }
+        }
+
+        return answer;
+    }
+
+    public ArrayList<Integer> solutionInLectureThroughtTwoPointers(int aArrCount, int bArrCount, int[] aArr, int[] bArr) {
+
+        ArrayList<Integer> answer = new ArrayList<>();
+        int p1 = 0;
+        int p2 = 0;
+
+        while (p1 < aArrCount && p2 < bArrCount) {
+            if (aArr[p1] < bArr[p2]) {
+                answer.add(aArr[p1++]);
+            } else {
+                answer.add(bArr[p2++]);
+            }
+        }
+
+        while (p1 < aArrCount) {
+            answer.add(aArr[p1++]);
+        }
+
+        while (p2 < bArrCount) {
+            answer.add(bArr[p2++]);
+        }
 
         return answer;
     }
@@ -53,8 +102,11 @@ public class Main {
             bArr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for (int result : main.solution(aArr, bArr)) {
+//        for (int result : main.solution(aArr, bArr)) {
+//        for (int result : main.solutionThroughtTwoPointers(aArrCount, bArrCount, aArr, bArr)) {
+        for (int result : main.solutionInLectureThroughtTwoPointers(aArrCount, bArrCount, aArr, bArr)) {
             System.out.print(result + " ");
         }
+
     }
 }
