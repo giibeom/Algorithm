@@ -41,9 +41,50 @@ public class Main {
         return answer;
     }
 
+    // 강의 풀이 전 내용 설명만 듣고 풀기
+    public int solutionThroughtConceptExplain(int length, int k, int[] arr) {
+        int answer = 0;
+        int lt = 0;
+        int rt = 0;
+        int changeCount = 0;
 
+        for (int i = 0; i < length; i++) {
+            if (arr[rt] == 0) {
+                changeCount++;
+            }
+            while (changeCount > k) {
+                if (arr[lt] == 0) {
+                    changeCount--;
+                }
+                lt++;
+            }
+
+            answer = Math.max(answer, (rt - lt + 1));
+            rt++;
+        }
+
+        return answer;
+    }
+
+    // solutionThroughtConceptExplain 와 로직 동일
     public int solutionInLecture(int length, int k, int[] arr) {
         int answer = 0;
+        int cnt = 0;
+        int lt = 0;
+
+        for (int rt = 0; rt < length; rt++) {
+            if (arr[rt] == 0) {
+                cnt++;
+            }
+            while (cnt > k) {
+                if (arr[lt] == 0) {
+                    cnt--;
+                }
+                lt++;
+            }
+            answer = Math.max(answer, (rt - lt + 1));
+        }
+
 
         return answer;
     }
@@ -64,6 +105,6 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        System.out.println(main.solutionInLecture(length, k, arr));
+        System.out.println(main.solutionThroughtConceptExplain(length, k, arr));
     }
 }
