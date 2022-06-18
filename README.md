@@ -102,3 +102,28 @@
 
 </div>
 </details>
+
+<details>
+
+<summary>Map</summary>
+<div markdown="1">       
+
+```java
+HashMap<K, V> map = new HashMap<>();
+```
+
+- `map.getOrDefault(key, 디폴트값)`
+  - key가 존재하면 해당 key의 value 리턴, key가 null 일 시 디폴트값 리턴
+  - return V
+- `map.containsKey('A')`
+  - map 안에 키들 중 'A'라는 키가 존재하는지 확인
+  - return Boolean
+- `map.remove('A')`
+  - A 키를 삭제하고 A의 Value 였던 값을 반환
+  - return V
+- `map.size()`
+  - map의 사이즈를 반환
+  - return int
+
+</div>
+</details>
