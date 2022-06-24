@@ -124,6 +124,9 @@ HashMap<K, V> map = new HashMap<>();
 - `map.size()`
   - map의 사이즈를 반환
   - return int
+- `mapA.equls(mapB)`
+  - map끼리의 객체 비교
+
 
 </div>
 </details>
