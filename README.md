@@ -104,10 +104,13 @@
 </details>
 
 <details>
-
 <summary>Map</summary>
 <div markdown="1">       
 
+```markdown
+Hashmap : O(1) 로 빠르게 접근
+Treemap : 정렬을 해야되는 경우 - log(n)
+```
 ```java
 HashMap<K, V> map = new HashMap<>();
 ```
@@ -127,6 +130,35 @@ HashMap<K, V> map = new HashMap<>();
 - `mapA.equls(mapB)`
   - map끼리의 객체 비교
 
+</div>
+</details>
+
+<details>
+
+<summary>Set</summary>
+<div markdown="1">       
+
+```markdown
+중복제거가 필요할때 Set을 사용한다
+```
+```java 
+// 오름차순 정렬
+TreeSet<T> Tset = new TreeSet<>();
+
+// 내림차순 정렬
+TreeSet<T> Tset = new TreeSet<>(Collections.reverseOrder());
+```
+
+- `Tset.add(value)`
+  - value값을 추가
+- `Tset.remove(value)`
+  - value값을 삭제
+- `Tset.size()`
+  - Set에 저장되어있는 값의 개수 반환
+- `Tset.first()`
+  - Set에 정렬되어 저장되어있는 값 중 제일 **첫번째** 요소 반환
+- `Tset.last()`
+  - Set에 정렬되어 저장되어있는 값 중 제일 **마지막** 요소 반환
 
 </div>
 </details>
