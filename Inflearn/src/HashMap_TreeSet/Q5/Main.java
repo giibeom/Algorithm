@@ -42,7 +42,7 @@ public class Main {
         for (int i = 0; i < card.length; i++) {
             for (int j = i + 1; j < card.length - 1; j++) {
                 for (int k = j + 1; k < card.length; k++) {
-                    Tset.add(card[i] + card[j] + card[k])
+                    Tset.add(card[i] + card[j] + card[k]);
                 }
             }
         }
