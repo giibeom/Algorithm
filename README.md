@@ -162,3 +162,29 @@ TreeSet<T> Tset = new TreeSet<>(Collections.reverseOrder());
 
 </div>
 </details>
+
+
+<details>
+<summary>Stack</summary>
+<div markdown="1">       
+
+```markdown
+괄호에 대한 문제는 십중팔구 스택 관련 문제!!
+ex) (), [], {} ....
+
+링게임이라고 생각하면 됨 -> First In Last OUT
+```
+```java 
+Stack<String> stack = new Stack<>();
+```
+
+- `stack.push(value)`
+  - 스택 맨위에 value값을 추가
+- `stack.pop()`
+  - 맨 위에 쌓여있는 값 제거
+  - 제거할 stack이 없을 시 EmptyStackException
+- `stack.isEmpty()`
+  - 스택이 비어있는지 확인
+
+</div>
+</details>
