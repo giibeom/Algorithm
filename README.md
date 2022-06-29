@@ -183,6 +183,7 @@ Stack<String> stack = new Stack<>();
 - `stack.pop()`
   - 맨 위에 쌓여있는 값 제거
   - 제거할 stack이 없을 시 EmptyStackException
+  - return 삭제한 값
 - `stack.isEmpty()`
   - 스택이 비어있는지 확인
 
