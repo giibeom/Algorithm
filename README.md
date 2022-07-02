@@ -31,6 +31,8 @@
   - c가 알파벳인지 판별
 - `Character.isDigit(c)`
   - c가 숫자인지 판별
+- `Character.getNumericValue(c)`
+  - c의 숫자값을 리턴
 
 </div>
 </details>
@@ -186,6 +188,12 @@ Stack<String> stack = new Stack<>();
   - return 삭제한 값
 - `stack.isEmpty()`
   - 스택이 비어있는지 확인
+- `stack.firstElement()`
+  - 스택의 가장 첫번째 값을 반환
+  - `stack.get(0)과 동일`
+- `stack.lastElement()`
+  - 스택의 가장 마지막번째인 값을 반환
+  - `stack.peek()과 동일`
 
 </div>
 </details>
