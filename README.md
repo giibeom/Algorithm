@@ -197,3 +197,37 @@ Stack<String> stack = new Stack<>();
 
 </div>
 </details>
+
+
+<details>
+<summary>Queue</summary>
+<div markdown="1">       
+
+```markdown
+파이프 통로라고 생각하면 됨 -> First In First OUT
+```
+```java 
+Queue<T> queue = new LinkedList<>();
+```
+
+- `queue.offer()`
+  - 큐 맨 뒤로 값 집어넣기
+  - return boolean
+- `queue.poll()`
+  - 큐 맨 앞에 값 뽑아내기
+  - return T
+- `queue.peek()`
+  - 큐 맨 앞에 값 확인
+  - return T
+- `queue.size()`
+  - 큐에 적재되어있는 데이터 개수 확인
+  - return Integer
+- `queue.isEmpty()`
+  - 큐가 비어있는지 확인
+  - return boolean
+- `queue.contains(x)`
+  - 큐에 값x가 존재하는지 확인
+  - return boolean
+
+</div>
+</details>
